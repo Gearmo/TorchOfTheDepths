@@ -58,3 +58,14 @@ Show character w/two buttons: Start Adventure, or Restart (will simply refresh p
 
 */
 
+let playerName = prompt("What is your name?");
+let playerClass = prompt("Please choose a class: Berserker, Mage, or Rogue.");
+let playerGender = prompt("Please enter a gender for your character: Male, Female, or They/Them");
+let buddySpecies = prompt("Please choose a buddy: Parrot, Wolf, Slug");
+let buddyName = prompt("Please name your buddy.");
+
+document.write(playerName + "<br>");
+document.write(playerClass + "<br>");
+document.write(playerGender + "<br>");
+document.write(buddySpecies + "<br>");
+document.write(buddyName + "<br>");
