@@ -64,26 +64,49 @@ Show character & buddy w/two buttons: Start Adventure, or Restart (will simply r
 
 */
 
-let playerName = prompt("What is your name?");
-let playerClass = prompt("Please choose a class: Berserker, Mage, or Rogue.");
-    if (playerClass == Berserker || berserker) {
-
-    }
-    if (playerClass == Mage || mage) {
-        
-    } 
-    if (playerClass == Rogue || rogue) {
-        
+/* let playerName = prompt("What is your name?");
+    if (confirm(`Is "${playerName}" correct?`)) {
+        true;
     }
     else {
-        prompt("Please choose a class: Berserker, Mage, or Rogue.");
-    }
-let playerGender = prompt("Please enter a gender for your character: Male, Female, or They/Them");
-let buddySpecies = prompt("Please choose a buddy: Parrot, Wolf, Slug");
-let buddyName = prompt("Please name your buddy.");
+        let playerName = prompt("What is your name?")
+    };
+*/
 
+let playerClass = prompt("Please choose a class: Berserker, Mage, or Rogue.");
+    // while input is NOT Berserker, Mage, or Rogue, repeat until it is. Otherwise, continue asking the prompt.
+    while(playerClass != "Berserker" || "Mage" || "Rogue" || "berserker" ||"mage" || "rogue") {
+        if (playerClass != "Berserker" || "Mage" || "Rogue" || "berserker" ||"mage" || "rogue") {
+            alert("Please enter a valid class.");
+            break;
+        }
+        else {
+            break;
+        }
+    }
+    if(playerClass == "Berserker" || "berserker") {
+        alert("You are a Berserker!")
+    }
+    if(playerClass == "Mage" || "mage") {
+        alert("You are a Mage!")
+    }
+    if(playerClass == "Rogue" || "rogue") {
+        alert("You are a Rogue!")
+    } //everything is off here. reconsider the order in which you're placing things....
+
+/*
+let playerGender = prompt("Please enter a gender for your character: Male, Female, or They/Them");
+    confirm(`So you're a ${playerGender}?`);
+
+let buddyType = prompt("Please choose a buddy: Parrot, Wolf, Slug");
+    confirm(`Is ${buddyType} okay?`);
+
+let buddyName = prompt("Please name your buddy.");
+    confirm(`Is "${buddyName}" correct?`);
+
+*/
 document.write("PLAYER: " + playerName + "<br>");
 document.write("CLASS: " + playerClass + "<br>");
 document.write("GENDER: " + playerGender + "<br>");
-document.write("BUDDY: " + buddySpecies + "<br>");
-document.write("BUDDY NAME:" + buddyName + "<br>");
+document.write("BUDDY TYPE:" + buddyType + "<br>");
+document.write("BUDDY NAME:" + buddyName + "<br>"); 
