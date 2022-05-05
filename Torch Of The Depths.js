@@ -50,10 +50,6 @@ Each class will start at Lvl 5 and can level up via battling or finding loot. Yo
 
 // -------------------------FLOW----------------------------- //
 
-JavaScript Prompt: Choose a Class: A, B, C
-JavaScript Prompt: Choose Gender: M, F, TT
-JavaScript Prompt: Choose Buddy: A, B, C
-
 Show character & buddy w/two buttons: Start Adventure, or Restart (will simply refresh page). 
 
 1) Encounter w/baddie
@@ -74,26 +70,21 @@ Show character & buddy w/two buttons: Start Adventure, or Restart (will simply r
 */
 
 let playerClass = prompt("Please choose a class: Berserker, Mage, or Rogue.");
-    // while input is NOT Berserker, Mage, or Rogue, repeat until it is. Otherwise, continue asking the prompt.
-    while(playerClass != "Berserker" || "Mage" || "Rogue" || "berserker" ||"mage" || "rogue") {
-        if (playerClass != "Berserker" || "Mage" || "Rogue" || "berserker" ||"mage" || "rogue") {
-            alert("Please enter a valid class.");
-            break;
-        }
-        else {
-            break;
-        }
-    }
-    if(playerClass == "Berserker" || "berserker") {
-        alert("You are a Berserker!")
-    }
-    if(playerClass == "Mage" || "mage") {
-        alert("You are a Mage!")
-    }
-    if(playerClass == "Rogue" || "rogue") {
-        alert("You are a Rogue!")
-    } //everything is off here. reconsider the order in which you're placing things....
 
+while(playerClass != "Berserker" || "Mage" || "Rogue")
+    switch (playerClass) {
+        case("Berserker"):
+            alert("You are a Berserker!");
+            break;
+        case("Mage"):
+            alert("You are a Mage!");
+            break;   
+        case("Rogue"):
+            alert("You are a Rogue!");
+            break;
+        default:
+            alert("Not a valid class!")
+    }
 /*
 let playerGender = prompt("Please enter a gender for your character: Male, Female, or They/Them");
     confirm(`So you're a ${playerGender}?`);
@@ -110,3 +101,4 @@ document.write("CLASS: " + playerClass + "<br>");
 document.write("GENDER: " + playerGender + "<br>");
 document.write("BUDDY TYPE:" + buddyType + "<br>");
 document.write("BUDDY NAME:" + buddyName + "<br>"); 
+//write some nice HTML/CSS around this
